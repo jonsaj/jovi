@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res) {
 
  var video ="<iframe width=\"560\" height=\"315\" src=\"//www.youtube.com/embed/e7x9J2U8ZR4\" frameborder=\"0\" allowfullscreen></iframe>" ;
-  res.render('index', { title: 'Jovi Raps',
+  res.render('index.html', { title: 'Jovi Raps',
 			youtubevideo:  video});
 });
 
