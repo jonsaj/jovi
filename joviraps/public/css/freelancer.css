@@ -4,6 +4,8 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
+
 body {
     overflow-x: hidden;
 }
@@ -77,7 +79,7 @@ hr.star-primary {
 }
 /* star color over white*/
 hr.star-primary:after {
-    color: red;
+    color: orange;
     background-color: #fff;
 }
 
@@ -85,10 +87,10 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
-/* main header*/
+/* main section on page*/
 header {
     text-align: center;
-    color: #fff;
+    color: #fff ; /*text color */
     background: slategray;
 }
 
@@ -117,7 +119,7 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     header .container {
-        padding-top: 200px;
+        padding-top: 125px;
         padding-bottom: 100px;
     }
 
@@ -139,25 +141,39 @@ header .intro-text .skills {
     }
 
     .navbar-fixed-top .navbar-brand {
-        font-size: 2em;
+        font-size: 6.5em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
     }
+/*used for images. still not working quite right*/
+/*    .navbar-fixed-top .navbar-brand img{
+        width: 50%;
+        max-width: 50%
+
+    }*/
 
     .navbar-fixed-top.navbar-shrink {
-        padding: 10px 0;
+        padding: 2px 0;
     }
 
+/* font in navbar */
     .navbar-fixed-top.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
+        font-size: 3.5em;
+
     }
+    /*used for images. still not workign quite right*/
+/*    .navbar-fixed-top.navbar-shrink .navbar-brand  img{
+        width: 25%;
+        max-width: 25%;
+        height: 150px;
+    }*/
 }
 
 .navbar {
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .navbar a:focus {
@@ -271,10 +287,23 @@ section.success {
     transition: all .3s ease-in-out;
 }
 
+.btn-outline-top {
+    margin-top: 10px;
+    border: solid 2px #fff;
+    font-size: 20px;
+    color: #fff;
+    background: 0 0;
+    transition: all .3s ease-in-out;
+}
+
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active,
-.btn-outline.active {
+.btn-outline.active,
+.btn-outline-top:hover,
+.btn-outline-top:focus,
+.btn-outline-top:active,
+.btn-outline-top.active {
     border: solid 2px yellow;
     color: green;
     background: pink;
@@ -375,6 +404,17 @@ footer .footer-below {
     line-height: 45px;
 }
 
+.btn-social-top {
+    display: inline-block;
+    width: 40px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 10%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 45px;
+}
+
 .btn:focus,
 .btn:active,
 .btn.active {
@@ -466,4 +506,22 @@ footer .footer-below {
 .portfolio-modal .modal-backdrop {
     display: none;
     opacity: 0;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-img img{
+    width:175px;
 }

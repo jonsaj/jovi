@@ -5,8 +5,18 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1> <div align="center"> <%= title %> </div> </h1>
+    <h1 color:blue> <div class:'b' > Jovi Faps </div> </h1>
     <p>Welcome to <%= title %></p>
-	<%- youtubevideo %>
+	<% for(var i in youtubevideos){ %>
+	<iframe width="610" height="348" border="0" frameborder="0" scrolling="no" allowfullscreen="">
+		<!DOCTYPE html>
+		<html>
+		<body>
+	<%= youtubevideos[i].content %>
+	</body>
+	</html>
+	</iframe>
+	<% } %>
+	<p> Info about Headspace coming soon.</p>
   </body>
 </html>
