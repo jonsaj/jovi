@@ -45,8 +45,22 @@ var router = express.Router();
 // }
 
 /* GET home page. */
+var count = 35;
+
+
 router.get('/', function(req, res) {
-		res.render('index.html', { title: 'Jovi Raps'});
+		count = (count+1)%100;
+		if(count !== 99){
+			res.render('index.html', { title: 'Jovi Raps',
+									video: "//www.youtube.com/embed/YU5DXTHA35c?autoplay=1&autohide=1&rel=0&hd=1",
+									message: "Check out Jovi's new video"
+									});
+		}else{
+			res.render('index.html', { title: 'Jovi Raps',
+									video: "//www.youtube.com/embed/-SHrVY_lrxk?autoplay=1&autohide=1&rel=0&hd=1",
+									message: "Congrats! You've unlocked Jovi's secret video!"
+									});
+		}
 });
 
 module.exports = router;
