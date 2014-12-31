@@ -3833,7 +3833,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 50px;
+  min-height: 200px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -3952,7 +3952,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   text-decoration: none;
 }
 .navbar-brand > img {
-  max-width: 50px;
+  max-width: 350px;
   height:auto;
   display: block;
 }
