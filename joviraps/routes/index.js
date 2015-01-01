@@ -48,8 +48,13 @@ var router = express.Router();
 var count = 90;
 var win = -1;
 var max = 100;
+var visitors = 0;
+router.get('/status', function(req, res) {
+	res.render('status', { visitors:visitors,count:count,win:win,max:max } );
+});
 
 router.get('/', function(req, res) {
+	visitors++;
 	if(req.query.count){
 		count = parseInt(req.query.count);
 	}
