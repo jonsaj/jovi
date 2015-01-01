@@ -50,8 +50,8 @@ var win = -1;
 var max = 100;
 
 router.get('/', function(req, res) {
-	if(req.query.shit){
-		count = parseInt(req.query.shit);
+	if(req.query.count){
+		count = parseInt(req.query.count);
 	}
 	if(req.query.win){
 		win = parseInt(req.query.win);
@@ -60,7 +60,7 @@ router.get('/', function(req, res) {
 		max = parseInt(req.query.max);
 	}
 		count = (count+1)%max;
-		if(count !== win){
+		if(count !== win || req.query.shit){
 			res.render('index.html', { title: 'Jovi Raps',
 									video: "//www.youtube.com/embed/YU5DXTHA35c?autoplay=1&autohide=1&rel=0&hd=1",
 									message: ""
