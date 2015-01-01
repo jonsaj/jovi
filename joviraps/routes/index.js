@@ -45,7 +45,7 @@ var router = express.Router();
 // }
 
 /* GET home page. */
-var count = 35;
+var count = 90;
 
 
 router.get('/', function(req, res) {
