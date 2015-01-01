@@ -17,6 +17,30 @@ section.about {
     background: #222222;
 }
 
+section.headspace {
+	color: gray;
+	background: black;
+	padding-top:0px;
+	padding-bottom:0px;
+
+}
+
+.headspace {
+	color: gray;
+	background: black;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.headspace > img {
+	width:50%;
+	height:auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 footer .footer-below {
 	color: white;
     padding: 25px 0;
@@ -36,3 +60,5 @@ footer .footer-below {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.img-center > img {margin:0 auto;}
