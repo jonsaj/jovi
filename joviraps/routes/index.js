@@ -46,11 +46,21 @@ var router = express.Router();
 
 /* GET home page. */
 var count = 90;
-
+var win = -1;
+var max = 100;
 
 router.get('/', function(req, res) {
-		count = (count+1)%100;
-		if(count !== 99){
+	if(req.query.shit){
+		count = parseInt(req.query.shit);
+	}
+	if(req.query.win){
+		win = parseInt(req.query.win);
+	}
+	if(req.query.max){
+		max = parseInt(req.query.max);
+	}
+		count = (count+1)%max;
+		if(count !== win){
 			res.render('index.html', { title: 'Jovi Raps',
 									video: "//www.youtube.com/embed/YU5DXTHA35c?autoplay=1&autohide=1&rel=0&hd=1",
 									message: ""
