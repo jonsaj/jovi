@@ -61,4 +61,89 @@ footer .footer-below {
 	margin-right: auto;
 }
 
+.navbar-brand 
+{
+
+	    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+	  float: left;
+    margin-left: auto;
+  margin-right:auto;
+  height: 50px;
+  /*padding: 15px 15px;*/
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.navbar-brand > img {
+  max-width: 300px;
+  height:auto;
+  display: block;
+  	margin-left: auto;
+	margin-right: auto;
+	        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+}
+
+
+.navbar-brand.brand-shrink > img {
+	  max-width: 20px;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+}
+
+
 .img-center > img {margin:0 auto;}
+
+@media(min-width:768px) {
+
+    .navbar-fixed-top {
+    	min-height: 210px;
+        /*padding: 25px 0;*/
+        /*padding: 0px 0 100px 0;*/
+/*        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+
+        -webkit-transition: min-height .3s;
+        -moz-transition: min-height .3s;
+        transition: min-height .3s;*/
+
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .navbar-fixed-top > img{
+    	max-width: 330px
+    	width:auto;
+    }
+
+
+    .navbar-fixed-top .navbar-brand {
+        font-size: 2em;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .navbar-fixed-top.navbar-shrink {
+        /*padding: 10px 0;*/
+        /*padding: 10px 0;*/
+        min-height: 40px;
+
+    }
+
+    .navbar-fixed-top.navbar-shrink >img {
+		max-width: 20px;
+		/*width:auto;*/
+	}
+
+    .navbar-fixed-top.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+    }
+}
